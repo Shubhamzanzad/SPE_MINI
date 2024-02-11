@@ -65,7 +65,7 @@ public class scientificCalculator {
                     break;
             }
         }
-    
+
         System.out.println("Exiting the calculator...");
         scanner.close();
     }
