@@ -17,8 +17,7 @@ pipeline {
         stage('Run Unit Test') {
             steps {
                 script {
-                    sh 'java -cp /home/shubham/Desktop/SPE-Mini-Project/SPE_MINI:/home/shubham/Desktop/SPE-Mini-Project/SPE_MINI/lib/* org.junit.runner.JUnitCore appTest
-'
+                    sh 'java -cp SPE_MINI:SPE_MINI/lib/* org.junit.runner.JUnitCore appTest'
                 }
             }
         }
