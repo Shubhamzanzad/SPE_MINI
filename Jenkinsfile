@@ -18,7 +18,7 @@ pipeline {
         stage('Run Unit Test') {
             steps {
                 dir('SPE_MINI') {
-                    sh 'java -cp "lib/*:." org.junit.runner.JUnitCore appTest'
+                    sh 'java -cp "lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:." org.junit.runner.JUnitCore appTest'
                 }
             }
         }
