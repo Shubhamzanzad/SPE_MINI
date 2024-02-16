@@ -3,6 +3,7 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'calc'
         GITHUB_REPO_URL = 'https://github.com/Shubhamzanzad/SPE_MINI.git'
+        PATH = ""
     }
 
     stages {
@@ -16,7 +17,7 @@ pipeline {
         }
         stage('Run Unit Test') {
             steps {
-                script {
+                dir('SPE_MINI') {
                     sh 'java -cp SPE_MINI:SPE_MINI/lib/* org.junit.runner.JUnitCore appTest'
                 }
             }
